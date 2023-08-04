@@ -1,35 +1,39 @@
 import '../styles/home.css';
+import couch from '../images/couch.jpeg';
+import Interior from '../componebts/Interior';
 
-export default function Home() {
+function Home() {
   return (
-    <div className="h-[200vh]">
-      <div className="home h-[130vh] grid justify-items-center content-center">
-        <div className="text-center text-white">
-          <h1 className="text-white text-3xl  font-bold">
-            WE PROVIDE EVERYTHING
-          </h1>
-          <p className="text-6xl my-5">
+    <div className="h-[300vh]">
+      <div className="home h-[120vh] grid justify-items-center content-center">
+        <div className="text-[#ffffff] text-center">
+          <p className=" text-2xl font-bold">WE PROVIDE EVERYTHING</p>
+          <p className="text-5xl my-5">
             <span className="text-[#ff565b] font-extrabold">INTERIOR</span>{' '}
-            <span className="text-white font-extrabold"> DESIGNER</span>
+            DESIGNER
           </p>
-          <button className="bg-[#fff]  text-[#ff565b] w-[200px] h-[60px] rounded-2xl hover:bg-[#ff565b] hover:text-[#fff] transition duration-700">
+          <button className="bg-[#ffffff] hover:text-white transition duration-500 hover:bg-[#ff565b] text-[#ff565b] w-[180px] h-[50px] rounded-lg">
             Discover More
           </button>
         </div>
       </div>
       <div className="w-full flex justify-center items-center">
-        <div className="grid gap-3 justify-items-center content-center absolute grid-row-2  grid-col-4 w-[80vw] shadow-xl h-[40vh] bg-white z-0">
-          <div className="grid row-start-1 col-start-1 w-[15vw] h-[10vh]">
+        <div className="grid gap-5 justify-items-center content-center absolute md:grid-row-2 md:grid-col-4 grid-col-1 grid-row-5 w-[90vw] md:h-[40vh] h-[90vh] top-[100vh] bg-white shadow-xl z-0 ">
+          <div className="grid row-start-1 md:col-start-1 md:w-[17vw] w-[60vw] h-[15vh]">
             <h3 className="font-extrabold text-lg">Search Work by Title</h3>
             <input
               type="text"
-              className="border-[1px] border-gray-500 outline-none"
+              className="border-[1px] border-gray-500 outline-none rounded-md"
               placeholder="Type any work title...."
             />
           </div>
-          <div className="grid row-start-1 col-start-2 w-[15vw] h-[10vh]">
+          <div className="grid md:row-start-1 md:col-start-2 row-start-2 md:w-[17vw] w-[60vw] h-[15vh]">
             <h3 className="font-extrabold text-lg">Choose Category</h3>
-            <select name="" id="">
+            <select
+              name=""
+              id=""
+              className="border-[1px] border-gray-400 rounded-md"
+            >
               <option value="">Choose Category</option>
               <option value="">Exterior Design</option>
               <option value="">Interior Design</option>
@@ -37,9 +41,13 @@ export default function Home() {
               <option value="">Trend Design</option>
             </select>
           </div>
-          <div className="grid row-start-1 col-start-3 w-[15vw] h-[10vh]">
+          <div className="grid md:row-start-1 md:col-start-3 row-start-3 md:w-[17vw] w-[60vw] h-[15vh] ">
             <h3 className="font-extrabold text-lg">Price Range</h3>
-            <select name="" id="">
+            <select
+              name=""
+              id=""
+              className="border-[1px] border-gray-400 rounded-md"
+            >
               <option value="">Choose Price</option>
               <option value="">$100 - $250</option>
               <option value="">$250 - $500</option>
@@ -47,9 +55,13 @@ export default function Home() {
               <option value="">$1000+</option>
             </select>
           </div>
-          <div className="grid row-start-1 col-start-4 w-[15vw] h-[10vh]">
+          <div className="grid md:row-start-1 md:col-start-4 row-start-4 md:w-[17vw] w-[60vw] h-[15vh]">
             <h3 className="font-extrabold text-lg">Pick a Plan</h3>
-            <select name="" id="">
+            <select
+              name=""
+              id=""
+              className="border-[1px] border-gray-400 rounded-md"
+            >
               <option value="">Choose Plan</option>
               <option value="">Standard</option>
               <option value="">Proffessional</option>
@@ -57,13 +69,88 @@ export default function Home() {
               <option value="">Premium</option>
             </select>
           </div>
-          <div className="grid row-start-2 col-start-1 col-span-4 text-white mt-10 ">
-            <button className="bg-[#ff565b] w-[76vw] h-[6vh] rounded-xl">
+          <div className="grid md:row-start-2 md:col-start-1 md:col-span-4 row-start-5  ">
+            <button className="bg-[#ff565b] text-white hover:bg-black md:w-[85vw] w-[60vw] h-[7vh] rounded-md md:mt-0 mt-3">
               Search Now
             </button>
+          </div>
+        </div>
+      </div>
+      <div className="w-full flex justify-center">
+        <div className="w-[90vw] mt-[250px] font-[900]">
+          <h1 className="text-3xl">EXPLORE SOME OF OUR LATEST</h1>
+          <div className="text-[#ff565b] flex items-center space-x-5 text-3xl">
+            <div className="h-[3px] w-20 bg-[#ff565b]"></div>
+            <h1>
+              INTERIOR DESIGN WORK<span className="text-black">.</span>
+            </h1>
+          </div>
+          <div className="flex mt-10 justify-between">
+            <img
+              src={couch}
+              alt="couch"
+              className="w-[40vw] h-screen rounded-md"
+            />
+            <div className="basis-[45vw]">
+              <Interior
+                name={'Interior Design'}
+                date={'January 22, 2022'}
+                workplace={'The Waterfront Cafe and Restaurant'}
+                location={'Florida, USA'}
+                descriptionStart={
+                  'Designer HTML5 Template is 100% free to download provided by'
+                }
+                descriptionEnd={'TemplateMo website.'}
+              />
+              <Interior
+                name={'Interior Design'}
+                date={'January 22, 2022'}
+                workplace={'The Waterfront Cafe and Restaurant'}
+                location={'Florida, USA'}
+                descriptionStart={
+                  'Designer HTML5 Template is 100% free to download provided by'
+                }
+                descriptionEnd={'TemplateMo website.'}
+              />
+              <Interior
+                name={'Interior Design'}
+                date={'January 22, 2022'}
+                workplace={'The Waterfront Cafe and Restaurant'}
+                location={'Florida, USA'}
+                descriptionStart={
+                  'Designer HTML5 Template is 100% free to download provided by'
+                }
+                descriptionEnd={'TemplateMo website.'}
+              />
+              <Interior
+                name={'Interior Design'}
+                date={'January 22, 2022'}
+                workplace={'The Waterfront Cafe and Restaurant'}
+                location={'Florida, USA'}
+                descriptionStart={
+                  'Designer HTML5 Template is 100% free to download provided by'
+                }
+                descriptionEnd={'TemplateMo website.'}
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* {TRENDING} */}
+      <div className="flex justify-center w-full font-[900]">
+        <div className="w-[90vw]">
+          <h1 className="text-3xl">CHECK OUT WHATS TRENDING IN</h1>
+          <div className="text-[#ff565b] flex items-center space-x-5 text-3xl">
+            <div className="h-[3px] w-20 bg-[#ff565b]"></div>
+            <h1>
+              OUR INTERIOR WORK<span className="text-black">.</span>
+            </h1>
           </div>
         </div>
       </div>
     </div>
   );
 }
+
+export default Home;
